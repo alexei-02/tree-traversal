@@ -1,0 +1,19 @@
+name: 🚀 Run Tree Script on PR
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run:
+    name: 🚀 Run Tree.py on PR
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+
+      - name: 🚀 Run Tree.py
+        run: python3 tree.py
+        shell: bash
